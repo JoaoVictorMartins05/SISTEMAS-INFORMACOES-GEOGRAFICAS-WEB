@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/design_default_color_error"
+            android:text="Reset"
+            android:onClick="reset"/>
+
+        <TextView
+            android:id="@+id/txtPontoA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ponto A"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="112dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="215dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <Button
+                    android:layout_width="219dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@android:color/holo_orange_light"
+                    android:text="Ver Ponto A"
+                    android:onClick="verPontoA"
+                    tools:ignore="OnClick"/>
+
+                <Button
+                    android:layout_width="219dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@android:color/holo_blue_light"
+                    android:text="Ler Ponto A"
+                    android:onClick="lerPontoA"
+                    tools:ignore="OnClick"/>
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/editPtoA"
+                android:layout_width="match_parent"
+                android:layout_height="99dp"
+                android:ems="10"
+                android:maxLines="5"
+                android:inputType="textPersonName|textMultiLine"
+                android:textAlignment="center"
+                android:textSize="12sp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtPontoB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ponto B"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="112dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="215dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <Button
+                    android:layout_width="219dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@android:color/holo_orange_light"
+                    android:onClick="verPontoB"
+                    android:text="Ver Ponto B"
+                    tools:ignore="OnClick" />
+
+                <Button
+                    android:layout_width="219dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@android:color/holo_blue_light"
+                    android:onClick="lerPontoB"
+                    android:text="Ler Ponto B"
+                    tools:ignore="OnClick" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/editPtoB"
+                android:layout_width="match_parent"
+                android:layout_height="99dp"
+                android:ems="10"
+                android:inputType="textPersonName|textMultiLine"
+                android:textAlignment="center"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Distância"
+            android:onClick="calcularDistancia"/>
+        <WebView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/webv"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
